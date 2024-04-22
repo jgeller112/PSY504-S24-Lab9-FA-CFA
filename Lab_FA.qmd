@@ -1,0 +1,174 @@
+---
+title: "Lab9-FA-SEM"
+format: html
+editor: visual
+execute:
+  freeze: auto
+  echo: true
+  message: false
+  warning: false
+---
+
+# Lab 8 - Factor Analysis and SEM
+
+-   We are going to assess a scale that measures the anxiety that statistics provokes in students
+
+-   The dataset is from Andy Field with the following questions:
+
+    1.  Statistics makes me cry
+    2.  My friends will think I'm stupid for not being able to cope with R
+    3.  Standard deviations excite me
+    4.  I dream that Pearson is attacking me with correlation coefficients
+    5.  I don't understand statistics
+    6.  I have little experience of computers
+    7.  All computers hate me
+    8.  I have never been good at mathematics
+    9.  My friends are better at statistics than me
+    10. Computers are useful only for playing games
+    11. I did badly at mathematics at school
+    12. People try to tell you that R makes statistics easier to understand but it doesn't
+    13. I worry that I will cause irreparable damage because of my incompetence with computers
+    14. Computers have minds of their own and deliberately go wrong whenever I use them
+    15. Computers are out to get me
+    16. I weep openly at the mention of central tendency
+    17. I slip into a coma whenever I see an equation
+    18. R always crashes when I try to use it
+    19. Everybody looks at me when I use R
+    20. I can't sleep for thoughts of eigenvectors
+    21. I wake up under my duvet thinking that I am trapped under a normal distribution
+    22. My friends are better at R than I am
+    23. If I'm good at statistics my friends will think I'm a nerd
+
+## Load data
+
+```{r}
+devtools::install_github("dr-JT/semoutput")
+library(corrplot) # nice correlation plots
+library(easystats) # paramaters
+library(tidyverse) # tidying visualization
+library(psych) # fa func
+
+```
+
+```{r}
+
+data <- read_csv("https://raw.githubusercontent.com/doomlab/learnSEM/master/vignettes/data/lecture_efa.csv")
+
+```
+
+## Exploratory Factor Analysis
+
+1.  Explore the data.
+
+    > Make sure there are no missing data
+
+    ```{r}
+
+    ```
+
+    > Look for outliers and remove them
+
+    ```{r}
+
+    ```
+
+    > Plot the correlation matrix
+
+    ```{r}
+
+    ```
+
+2.  Conduct and interpret the two diagnostic tests to determine if factor analysis is appropriate as an analysis
+
+    ```{r}
+
+    ```
+
+3.  Determine how many factors to extract. Inspect and interpret eigenvalues \> 1, scree plot, parallel plot, and the consensus method.
+
+    ```{r}
+
+    ```
+
+    ```{r}
+
+    ```
+
+    ```{r}
+
+    ```
+
+> Do they all agree? Make a choice on as to how many factors you want to extract
+
+::: callout-note
+## ANSWER
+:::
+
+1.  Conduct a factor analysis using `psych::fa`(make sure to choose an extraction method and rotation method)
+
+    ```{r}
+
+
+    ```
+
+2.  Output the factors loadings in a nice table
+
+    ```{r}
+
+    ```
+
+    > Which items appear to load on which factor? Are there any items that seem to load strongly on multiple factors (i.e., items that are cross-loaded)?
+
+    ::: callout-note
+    ## ANSWER
+    :::
+
+> Use `model_paramaters` and the `threshold` argument to get rid of loadings greater than .32. Does that help with interpretation? If not, try setting the `threshold` to max.
+
+```{r}
+
+```
+
+6.  Come up with names for the factors you extracted.
+
+    ::: callout-note
+    ## ANSWER
+    :::
+
+## Confirmatory Factor Analysis
+
+7.  Split your data into a testing and training datasets
+
+    ```{r}
+    ```
+
+8.  Fit the model you created on the test data using the the `cfa` function. How does the model fit fit? Use `semoutput (https://dr-jt.github.io/semoutput/)`
+
+    ```{r}
+    #look at fit indices dicussed in class 
+
+    ```
+
+9.  Fit a competing model (the choice is yours).
+
+    ```{r}
+
+    ```
+
+    > How does this model fit?
+
+    ::: callout-note
+    ## ANSWER
+    :::
+
+10. Compare both models you fit above. Which one fits the data better?
+
+    ```{r}
+    #LRT 
+    ```
+
+    ::: callout-note
+    ## ANSWER
+    :::
+
+11. Write up the results. Be sure to include a figure of the final EFA and a table containing factor loadings, communality, uniqueness, and complexity
