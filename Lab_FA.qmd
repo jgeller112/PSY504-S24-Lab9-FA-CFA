@@ -9,7 +9,7 @@ execute:
   warning: false
 ---
 
-# Lab 8 - Factor Analysis and SEM
+# Lab 8 - Factor Analysis and CFA
 
 -   We are going to assess a scale that measures the anxiety that statistics provokes in students
 
@@ -39,7 +39,7 @@ execute:
     22. My friends are better at R than I am
     23. If I'm good at statistics my friends will think I'm a nerd
 
-## Load data
+## Load packages and data
 
 ```{r}
 devtools::install_github("dr-JT/semoutput")
