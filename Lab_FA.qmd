@@ -87,7 +87,7 @@ data <- discovr::raq
 
 1.  Explore the data.
 
-> Any  missing data?
+> Any missing data?
 
 ```{r}
 
@@ -117,16 +117,15 @@ data <- discovr::raq
 ## ANSWER
 :::
 
-> Plot a nice looking correlation matrix.
+> Plot a nice looking correlation matrix
 
 ```{r}
 
 ```
 
-
 ### Factor suitability
 
-2.  Run and interpret the two diagnostic tests discussed in class  to determine if factor analysis is appropriate as an analysis
+2.  Run and interpret the two diagnostic tests discussed in class to determine if factor analysis is appropriate as an analysis
 
 ```{r}
 
