@@ -74,6 +74,12 @@ data <- read_csv("https://raw.githubusercontent.com/doomlab/learnSEM/master/vign
 
 ```
 
+> Is there multicollinearity in the data?
+
+```{r}
+
+```
+
 > Plot a nice looking correlation matrix
 
 ```{r}
@@ -118,7 +124,7 @@ data <- read_csv("https://raw.githubusercontent.com/doomlab/learnSEM/master/vign
 
 ### Factor extraction
 
-4.  Conduct a factor analysis using `psych::fa`(make sure to choose an extraction method and rotation method)
+4.  Conduct a factor analysis using `psych::fa`(make sure to choose an extraction method and rotation method).
 
 ```{r}
 #fa function
@@ -131,7 +137,7 @@ data <- read_csv("https://raw.githubusercontent.com/doomlab/learnSEM/master/vign
 
 ```
 
-> Which items appear to load on which factor? Are there any items that seem to load strongly on multiple factors (i.e., items that are cross-loaded)?
+> Which items load onto which factor? Are there any items that seem to load strongly on multiple factors (i.e., items that are cross-loaded)?
 
 ::: callout-note
 ## ANSWER
@@ -163,7 +169,7 @@ data <- read_csv("https://raw.githubusercontent.com/doomlab/learnSEM/master/vign
 
 ### Naming 
 
-6.  Come up with names for the factors you extracted
+6.  Come up with names for your factors
 
     ::: callout-note
     ## ANSWER
