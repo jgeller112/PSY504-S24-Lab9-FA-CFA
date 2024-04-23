@@ -87,17 +87,25 @@ data <- discovr::raq
 
 1.  Explore the data.
 
-> Make sure there is no missing data
+> Any  missing data?
 
 ```{r}
 
 ```
 
-> Look for outliers and remove them
+::: callout-note
+## ANSWER
+:::
+
+> Outliers?
 
 ```{r}
 
 ```
+
+::: callout-note
+## ANSWER
+:::
 
 > Is there multicollinearity in the data?
 
@@ -105,15 +113,20 @@ data <- discovr::raq
 
 ```
 
-> Plot a nice looking correlation matrix
+::: callout-note
+## ANSWER
+:::
+
+> Plot a nice looking correlation matrix.
 
 ```{r}
 
 ```
 
+
 ### Factor suitability
 
-2.  Conduct and interpret the two diagnostic tests to determine if factor analysis is appropriate as an analysis
+2.  Run and interpret the two diagnostic tests discussed in class  to determine if factor analysis is appropriate as an analysis
 
 ```{r}
 
@@ -121,7 +134,7 @@ data <- discovr::raq
 
 ### Number of factors
 
-3.  Determine how many factors to extract. Run `fa.parallel` (make sure you run factor analysis)
+3.  Determine how many factors to extract. Run `fa.parallel` (make sure you run a factor analysis (FA) and not PCA)
 
 ```{r}
 
@@ -184,13 +197,13 @@ data <- discovr::raq
 
 ```
 
-> Does that help with interpretation?
+> Does this help with interpretation?
 
 ::: callout-note
 ## ANSWER
 :::
 
-> if not, try setting threshold to "max"
+> if not, try setting threshold to "max" in `model_paramters`
 
 ```{r}
 
@@ -210,7 +223,7 @@ data <- discovr::raq
 ## ANSWER
 :::
 
-## Confirmatory Factor Analysis
+## Confirmatory factor analysis
 
 7.  Split your data into a testing and training datasets
 
