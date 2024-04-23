@@ -9,10 +9,9 @@ execute:
   warning: false
 ---
 
-
 -   We are going to assess a scale that measures the anxiety that statistics provokes in students
 
--   The dataset is from Andy Field.  Each question was a statement followed by a five-point Likert scale: strongly disagree = 1, disagree, neither agree nor disagree, agree and strongly agree (SD, D, N, A and SA respectively).
+-   The dataset is from Andy Field. Each question was a statement followed by a five-point Likert scale: strongly disagree = 1, disagree, neither agree nor disagree, agree and strongly agree (SD, D, N, A and SA respectively).
 
 +------------------------------------------------------------------------------------------------------------------------------------------+
 | -   **id**: The student's id                                                                                                             |
@@ -203,7 +202,7 @@ data <- discovr::raq
 ## ANSWER
 :::
 
-### Naming 
+### Naming
 
 6.  Come up with names for your factors
 
@@ -224,7 +223,7 @@ data <- discovr::raq
     #look at fit indices discussed in class 
     ```
 
-9.  Fit a competing model (come up with an alternative, nested, model).
+9.  Fit a competing model (come up with an alternative, nested, model)
 
     ```{r}
 
