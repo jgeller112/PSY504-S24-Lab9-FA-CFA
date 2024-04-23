@@ -58,9 +58,11 @@ data <- read_csv("https://raw.githubusercontent.com/doomlab/learnSEM/master/vign
 
 ## Exploratory Factor Analysis
 
+### Explore
+
 1.  Explore the data.
 
-    > Make sure there are no missing data
+    > Make sure there is no missing data
 
     ```{r}
 
@@ -72,11 +74,13 @@ data <- read_csv("https://raw.githubusercontent.com/doomlab/learnSEM/master/vign
 
     ```
 
-    > Plot the correlation matrix
+    > Plot a nice looking correlation matrix
 
     ```{r}
 
     ```
+
+    ### Factor suitability
 
 2.  Conduct and interpret the two diagnostic tests to determine if factor analysis is appropriate as an analysis
 
@@ -84,7 +88,9 @@ data <- read_csv("https://raw.githubusercontent.com/doomlab/learnSEM/master/vign
 
     ```
 
-3.  Determine how many factors to extract. Inspect and interpret eigenvalues \> 1, scree plot, parallel plot, and the consensus method.
+    ### Number of factors
+
+3.  Determine how many factors to extract. Inspect and interpret the scree plot, parallel plot, and the consensus method. For the scree and paraellel plot use `fa.parallel`
 
     ```{r}
 
@@ -98,36 +104,46 @@ data <- read_csv("https://raw.githubusercontent.com/doomlab/learnSEM/master/vign
 
     ```
 
-> Do they all agree? Make a choice on as to how many factors you want to extract
+> Do they all agree?
 
 ::: callout-note
 ## ANSWER
 :::
 
-1.  Conduct a factor analysis using `psych::fa`(make sure to choose an extraction method and rotation method)
+> How many factors should we extract?
 
-    ```{r}
+::: callout-note
+## ANSWER
+:::
+
+### Factor extraction
+
+4.  Conduct a factor analysis using `psych::fa`(make sure to choose an extraction method and rotation method)
+
+```{r}
 
 
-    ```
+```
 
-2.  Output the factors loadings in a nice table
+5.  Output the factors loadings in a nice table
 
-    ```{r}
+```{r}
 
-    ```
+```
 
-    > Which items appear to load on which factor? Are there any items that seem to load strongly on multiple factors (i.e., items that are cross-loaded)?
+> Which items appear to load on which factor? Are there any items that seem to load strongly on multiple factors (i.e., items that are cross-loaded)?
 
-    ::: callout-note
-    ## ANSWER
-    :::
+::: callout-note
+## ANSWER
+:::
 
 > Use `model_paramaters` and the `threshold` argument to get rid of loadings greater than .32. Does that help with interpretation? If not, try setting the `threshold` to max.
 
 ```{r}
 
 ```
+
+### Naming 
 
 6.  Come up with names for the factors you extracted.
 
