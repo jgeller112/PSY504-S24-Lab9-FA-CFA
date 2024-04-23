@@ -62,47 +62,47 @@ data <- read_csv("https://raw.githubusercontent.com/doomlab/learnSEM/master/vign
 
 1.  Explore the data.
 
-    > Make sure there is no missing data
+> Make sure there is no missing data
 
-    ```{r}
+```{r}
 
-    ```
+```
 
-    > Look for outliers and remove them
+> Look for outliers and remove them
 
-    ```{r}
+```{r}
 
-    ```
+```
 
-    > Plot a nice looking correlation matrix
+> Plot a nice looking correlation matrix
 
-    ```{r}
+```{r}
 
-    ```
+```
 
-    ### Factor suitability
+### Factor suitability
 
 2.  Conduct and interpret the two diagnostic tests to determine if factor analysis is appropriate as an analysis
 
-    ```{r}
+```{r}
 
-    ```
+```
 
-    ### Number of factors
+### Number of factors
 
 3.  Determine how many factors to extract. Inspect and interpret the scree plot, parallel plot, and the consensus method. For the scree and paraellel plot use `fa.parallel`
 
-    ```{r}
+```{r}
 
-    ```
+```
 
-    ```{r}
+```{r}
 
-    ```
+```
 
-    ```{r}
+```{r}
 
-    ```
+```
 
 > Do they all agree?
 
@@ -110,7 +110,7 @@ data <- read_csv("https://raw.githubusercontent.com/doomlab/learnSEM/master/vign
 ## ANSWER
 :::
 
-> How many factors should we extract?
+> How many factors should we extract? Justify your response.
 
 ::: callout-note
 ## ANSWER
@@ -121,7 +121,7 @@ data <- read_csv("https://raw.githubusercontent.com/doomlab/learnSEM/master/vign
 4.  Conduct a factor analysis using `psych::fa`(make sure to choose an extraction method and rotation method)
 
 ```{r}
-
+#fa function
 
 ```
 
@@ -137,15 +137,33 @@ data <- read_csv("https://raw.githubusercontent.com/doomlab/learnSEM/master/vign
 ## ANSWER
 :::
 
-> Use `model_paramaters` and the `threshold` argument to get rid of loadings greater than .32. Does that help with interpretation? If not, try setting the `threshold` to max.
+> Use `model_paramaters` and the `threshold` argument to get rid of loadings greater than .32.
 
 ```{r}
 
 ```
 
+> Does that help with interpretation?
+
+::: callout-note
+## ANSWER
+:::
+
+> if not, try setting threshold to "max"
+
+```{r}
+
+```
+
+> Better?
+
+::: callout-note
+## ANSWER
+:::
+
 ### Naming 
 
-6.  Come up with names for the factors you extracted.
+6.  Come up with names for the factors you extracted
 
     ::: callout-note
     ## ANSWER
@@ -161,8 +179,7 @@ data <- read_csv("https://raw.githubusercontent.com/doomlab/learnSEM/master/vign
 8.  Fit the model you created on the test data using the the `cfa` function. How does the model fit fit? Use `semoutput (https://dr-jt.github.io/semoutput/)`
 
     ```{r}
-    #look at fit indices dicussed in class 
-
+    #look at fit indices discussed in class 
     ```
 
 9.  Fit a competing model (the choice is yours).
