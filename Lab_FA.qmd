@@ -96,15 +96,25 @@ data <- read_csv("https://raw.githubusercontent.com/doomlab/learnSEM/master/vign
 
 ### Number of factors
 
-3.  Determine how many factors to extract. Inspect and interpret the scree plot, parallel plot, and the consensus method. For the scree and paraellel plot use `fa.parallel`
+3.  Determine how many factors to extract. Run `fa.parallel` (make sure you run factor analysis)
 
 ```{r}
 
 ```
 
-```{r}
+> Looking at the graph. How many factors should we extract using:
+>
+> -   Eigenvalues \> 1?
+>
+> -   Scree plot?
+>
+> -   Parallel plot?
 
-```
+::: callout-note
+## ANSWER
+:::
+
+> Now use the consensus method approach from `easystats`
 
 ```{r}
 
@@ -188,7 +198,7 @@ data <- read_csv("https://raw.githubusercontent.com/doomlab/learnSEM/master/vign
     #look at fit indices discussed in class 
     ```
 
-9.  Fit a competing model (the choice is yours).
+9.  Fit a competing model (come up with an alternative, nested, model).
 
     ```{r}
 
