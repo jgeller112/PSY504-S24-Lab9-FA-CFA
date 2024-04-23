@@ -1,5 +1,5 @@
 ---
-title: "Lab9-FA-SEM"
+title: "Lab 9 - Factor Analysis and CFA"
 format: html
 editor: visual
 execute:
@@ -9,51 +9,77 @@ execute:
   warning: false
 ---
 
-# Lab 8 - Factor Analysis and CFA
 
 -   We are going to assess a scale that measures the anxiety that statistics provokes in students
 
 -   The dataset is from Andy Field with the following questions:
 
-    1.  Statistics makes me cry
-    2.  My friends will think I'm stupid for not being able to cope with R
-    3.  Standard deviations excite me
-    4.  I dream that Pearson is attacking me with correlation coefficients
-    5.  I don't understand statistics
-    6.  I have little experience of computers
-    7.  All computers hate me
-    8.  I have never been good at mathematics
-    9.  My friends are better at statistics than me
-    10. Computers are useful only for playing games
-    11. I did badly at mathematics at school
-    12. People try to tell you that R makes statistics easier to understand but it doesn't
-    13. I worry that I will cause irreparable damage because of my incompetence with computers
-    14. Computers have minds of their own and deliberately go wrong whenever I use them
-    15. Computers are out to get me
-    16. I weep openly at the mention of central tendency
-    17. I slip into a coma whenever I see an equation
-    18. R always crashes when I try to use it
-    19. Everybody looks at me when I use R
-    20. I can't sleep for thoughts of eigenvectors
-    21. I wake up under my duvet thinking that I am trapped under a normal distribution
-    22. My friends are better at R than I am
-    23. If I'm good at statistics my friends will think I'm a nerd
++------------------------------------------------------------------------------------------------------------------------------------------+
+| -   **id**: The student's id                                                                                                             |
+|                                                                                                                                          |
+| -   **raq_01**: responses (1-5) to the question *Statistics make me cry*                                                                 |
+|                                                                                                                                          |
+| -   **raq_02**: responses (1-5) to the question *My friends will think I'm stupid for not being able to cope with R*                     |
+|                                                                                                                                          |
+| -   **raq_03**: responses (1-5) to the question *Standard deviations excite me*                                                          |
+|                                                                                                                                          |
+| -   **raq_04**: responses (1-5) to the question *I dream that Pearson is attacking me with correlation coefficients*                     |
+|                                                                                                                                          |
+| -   **raq_05**: responses (1-5) to the question *I don't understand statistics*                                                          |
+|                                                                                                                                          |
+| -   **raq_06**: responses (1-5) to the question *I have little experience of computers*                                                  |
+|                                                                                                                                          |
+| -   **raq_07**: responses (1-5) to the question *All computers hate me*                                                                  |
+|                                                                                                                                          |
+| -   **raq_08**: responses (1-5) to the question *I have never been good at mathematics*                                                  |
+|                                                                                                                                          |
+| -   **raq_09**: responses (1-5) to the question *My friends are better at statistics than me*                                            |
+|                                                                                                                                          |
+| -   **raq_10**: responses (1-5) to the question *Computers are useful only for playing games*                                            |
+|                                                                                                                                          |
+| -   **raq_11**: responses (1-5) to the question *I did badly at mathematics at school*                                                   |
+|                                                                                                                                          |
+| -   **raq_12**: responses (1-5) to the question *People try to tell you that R makes statistics easier to understand but it doesn't*     |
+|                                                                                                                                          |
+| -   **raq_13**: responses (1-5) to the question *I worry that I will cause irreparable damage because of my incompetence with computers* |
+|                                                                                                                                          |
+| -   **raq_14**: responses (1-5) to the question *Computers have minds of their own and deliberately go wrong whenever I use them*        |
+|                                                                                                                                          |
+| -   **raq_15**: responses (1-5) to the question *Computers are out to get me*                                                            |
+|                                                                                                                                          |
+| -   **raq_16**: responses (1-5) to the question *I weep openly at the mention of central tendency*                                       |
+|                                                                                                                                          |
+| -   **raq_17**: responses (1-5) to the question *I slip into a coma whenever I see an equation*                                          |
+|                                                                                                                                          |
+| -   **raq_18**: responses (1-5) to the question *R always crashes when I try to use it*                                                  |
+|                                                                                                                                          |
+| -   **raq_19**: responses (1-5) to the question *Everybody looks at me when I use R*                                                     |
+|                                                                                                                                          |
+| -   **raq_20**: responses (1-5) to the question *I can't sleep for thoughts of eigenvectors*                                             |
+|                                                                                                                                          |
+| -   **raq_21**: responses (1-5) to the question *I wake up under my duvet thinking that I am trapped under a normal distribution*        |
+|                                                                                                                                          |
+| -   **raq_22**: responses (1-5) to the question *My friends are better at R than I am*                                                   |
+|                                                                                                                                          |
+| -   **raq_23**: responses (1-5) to the question *If I am good at statistics people will think I am a nerd*                               |
++==========================================================================================================================================+
+|                                                                                                                                          |
++------------------------------------------------------------------------------------------------------------------------------------------+
 
 ## Load packages and data
 
 ```{r}
-devtools::install_github("dr-JT/semoutput")
+remotes::install_github("dr-JT/semoutput")
+remotes::install_github("profandyfield/discovr")
+library(remotes)
 library(corrplot) # nice correlation plots
 library(easystats) # paramaters
 library(tidyverse) # tidying visualization
 library(psych) # fa func
-
 ```
 
 ```{r}
-
-data <- read_csv("https://raw.githubusercontent.com/doomlab/learnSEM/master/vignettes/data/lecture_efa.csv")
-
+data <- discovr::raq
 ```
 
 ## Exploratory Factor Analysis
@@ -181,9 +207,9 @@ data <- read_csv("https://raw.githubusercontent.com/doomlab/learnSEM/master/vign
 
 6.  Come up with names for your factors
 
-    ::: callout-note
-    ## ANSWER
-    :::
+::: callout-note
+## ANSWER
+:::
 
 ## Confirmatory Factor Analysis
 
@@ -206,9 +232,9 @@ data <- read_csv("https://raw.githubusercontent.com/doomlab/learnSEM/master/vign
 
     > How does this model fit?
 
-    ::: callout-note
-    ## ANSWER
-    :::
+::: callout-note
+## ANSWER
+:::
 
 10. Compare both models you fit above. Which one fits the data better?
 
@@ -216,8 +242,8 @@ data <- read_csv("https://raw.githubusercontent.com/doomlab/learnSEM/master/vign
     #LRT 
     ```
 
-    ::: callout-note
-    ## ANSWER
-    :::
+::: callout-note
+## ANSWER
+:::
 
 11. Write up the results. Be sure to include a figure of the final EFA and a table containing factor loadings, communality, uniqueness, and complexity
