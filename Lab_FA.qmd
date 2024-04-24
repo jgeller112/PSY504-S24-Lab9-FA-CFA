@@ -62,7 +62,6 @@ execute:
 |                                                                                                                                          |
 | -   **raq_23**: responses (1-5) to the question *If I am good at statistics people will think I am a nerd*                               |
 +==========================================================================================================================================+
-|                                                                                                                                          |
 +------------------------------------------------------------------------------------------------------------------------------------------+
 
 ## Load packages and data
@@ -202,7 +201,7 @@ data <- discovr::raq
 ## ANSWER
 :::
 
-> if not, try setting threshold to "max" in `model_paramters`
+> if not, try setting threshold to "max" in `model_parameters`
 
 ```{r}
 
